@@ -1,0 +1,56 @@
+<!-- TODO: Create an HTML form for a travel website to book a vacation. -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Website</title>
+  </head>
+  <body>
+    <form action="/submit.php">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name here" />
+      </div>
+      <br />
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email address" />
+      </div>
+      <br />
+      <div>
+        <label for="contactnumber">Contact Number</label>
+        <input
+          type="tel"
+          placeholder="Enter your contact number"
+          id="contactnumber"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="date">Date of your visiting</label>
+        <input type="date" id="date" placeholder="Enter the date" />
+      </div>
+      <br />
+      <div>
+        <h2><b>Your travel plan</b></h2>
+        <label for="hotel">Hotel</label>
+        <input type="radio" id="hotel" required />
+        <br />
+        <label for="food">Food</label>
+        <input type="radio" id="food" />
+        <br />
+        <label for="Jungle Safari">Jungle Safari</label>
+        <input type="radio" id="Jungle Safari" />
+        <br />
+        <label for="Guide">Guide</label>
+        <input type="radio" id="Guide" />
+      </div>
+      <br />
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

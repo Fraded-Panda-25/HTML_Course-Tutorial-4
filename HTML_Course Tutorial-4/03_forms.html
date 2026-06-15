@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #2ecc71, #f1c40f);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+      }
+
+      form {
+        width: 100%;
+        max-width: 650px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #1b5e20;
+        font-size: 2rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #2e7d32;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #c8e6c9;
+        border-radius: 10px;
+        font-size: 1rem;
+        outline: none;
+        transition: 0.3s ease;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #43a047;
+        box-shadow: 0 0 10px rgba(67, 160, 71, 0.3);
+      }
+
+      p {
+        font-weight: 600;
+        color: #2e7d32;
+        margin-bottom: 10px;
+      }
+
+      /* Radio buttons */
+      input[type="radio"] {
+        width: auto;
+        margin-right: 8px;
+        accent-color: #43a047;
+      }
+
+      /* Checkbox */
+      input[type="checkbox"] {
+        width: auto;
+        margin-left: 10px;
+        accent-color: #43a047;
+      }
+
+      /* Inline radio labels */
+      input[type="radio"] + label,
+      label + input[type="radio"] {
+        display: inline-block;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #43a047, #fbc02d);
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(67, 160, 71, 0.3);
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      br {
+        display: none;
+      }
+
+      form > div,
+      form > div > div {
+        margin-bottom: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/submit.php">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter Name" />
+      </div>
+      <br />
+      <div>
+        <label for="phonenumber">Phone Number</label>
+        <input
+          id="phonenumber"
+          type="tel"
+          placeholder="Enter your Phone Number"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter your Email ID" />
+      </div>
+      <br />
+      <div>
+        <label for="password">Password*</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your Password"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="date">Date of birth*</label>
+        <input id="date" type="date" required />
+      </div>
+      <br />
+      <!-- Dropdown for gender -->
+      <div>
+        <label for="gender">Enter your gender*</label>
+        <select name="Gender" id="gender" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Others">Others</option>
+        </select>
+        <br />
+        <div>
+          <p>Subscriptions Plans</p>
+          <label for="free">Free</label>
+          <input id="free" type="radio" name="subscription" />
+          <label for="plus">Plus</label>
+          <input id="plus" type="radio" name="subscription" />
+          <label for="pro">Pro</label>
+          <input id="pro" type="radio" name="subscription" />
+          <label for="max">Max</label>
+          <input id="max" type="radio" name="subscription" />
+        </div>
+        <br />
+        <div>
+          <p>Subscriptions Plans</p>
+          <label for="free">Freee</label>
+          <input id="free" type="radio" />
+          <label for="plus">Pluss</label>
+          <input id="plus" type="radio" />
+          <label for="pro">Proo</label>
+          <input id="pro" type="radio" />
+          <label for="max">Maxx</label>
+          <input id="max" type="radio" />
+        </div>
+        <br />
+        <div>
+          <label for="terms">Agree to all terms and conditions*</label>
+          <input type="checkbox" id="terms" required />
+        </div>
+        <br />
+        <div>
+          <label for="prompt">Prompt</label>
+          <textarea
+            name="Prompt"
+            id="prompt"
+            placeholder="Enter your prompt"
+            rows="8"
+          ></textarea>
+        </div>
+        <br />
+        <div>
+          <button type="submit">Submit Document</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
